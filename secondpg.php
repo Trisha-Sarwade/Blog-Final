@@ -11,12 +11,70 @@ echo
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="secondpg1.css">
+    <link rel="stylesheet" href="styles/gunjan.css">
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/applause-button/dist/applause-button.css">
     <title>Hello, world!</title>
 </head>
 
 <body>
-    <h1 class="text-center my-5 heading">Desired Heading</h1>
+<section id="nav-bar">
+<nav class="navbar fixed-top navbar-expand-lg navbar-light ">
+    <a class="navbar-brand" href="#first-page"><img src="images/logo.jpg">Communiqué</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <!--ml-auto for right alignment -->
+
+            <li class="nav-item active mx-auto">
+                <a class="nav-link" href="#first-page">HOME</a>
+            </li>
+            <li class="nav-item mx-auto">
+                <a class="nav-link" href="#practicearea">CORE COMPETENCIES</a>
+            </li>
+            <li class="nav-item mx-auto">
+                <a class="nav-link" href="#our-vision">OUR VISION</a>
+            </li>
+            <li class="nav-item mx-auto">
+                <a class="nav-link" href="#our-attorneys"> EXECUTIVE TEAM</a>
+            </li>
+            <li class="nav-item mx-auto">
+                <a class="nav-link" href="#form">CONTACT US</a>
+            </li>
+
+            <li class="nav-item mx-auto">
+                <a class="nav-link" href="gallery.html">GALLERY</a>
+            </li>
+            <li class="nav-item mx-auto">
+                <a class="nav-link" href="FAQs2.html">FAQs</a>
+            </li>
+            <li class="nav-item mx-auto">
+                <a class="nav-link" href="Events.html">EVENTS</a>
+            </li>
+            <li class="nav-item mx-auto">
+                <a class="nav-link" href="alumni.html">ALUMNI</a>
+            </li>
+            <li class="nav-item mx-auto">
+
+            </li>
+
+        </ul>
+        <button
+    class="btn btn-outline-success mx-1"
+    data-bs-toggle="modal"
+    data-bs-target="#loginModal"
+  >
+    Login
+  </button>
+    </div>
+
+
+</nav>
+
+
+</section>
+    <h1 class=" heading">Desired Heading</h1>
     <div class="everything">
         <div class="loq">
             <button id="btton">Questions</button>
@@ -42,7 +100,7 @@ echo
             </aside>
         </div>
 
-
+                
         <div class="text-center cntnt " id="cntnt">
 
             <div class="contactinfo">';
