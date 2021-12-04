@@ -13,7 +13,7 @@ echo
     <link rel="stylesheet" type="text/css" href="secondpg1.css">
     <link rel="stylesheet" href="styles/gunjan.css">
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/applause-button/dist/applause-button.css">
-    <title>Hello, world!</title>
+    <title>Our Blogs</title>
 </head>
 
 <body>
@@ -60,13 +60,7 @@ echo
             </li>
 
         </ul>
-        <button
-    class="btn btn-outline-success mx-1"
-    data-bs-toggle="modal"
-    data-bs-target="#loginModal"
-  >
-    Login
-  </button>
+        
     </div>
 
 
@@ -120,7 +114,7 @@ echo
                 $plink = $row2['photo'];
                 if($id == $idobtained)
                 {
-                    if($placeNintern == "placement")
+                    if($placeNintern == "placed")
                     {
                         $placeNintern = "Placed";
                     }
