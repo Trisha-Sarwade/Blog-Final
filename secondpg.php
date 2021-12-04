@@ -45,19 +45,50 @@ echo
 
         <div class="text-center cntnt " id="cntnt">
 
-            <div class="contactinfo">
-                <div style="width: 33.33%;" id="l1">Priyanshu Gautam</div>
-                <div style="width: 33.33%;" id="l2">Intern at home</div>
-                <div style="width: 33.33%;" class="linked" id="l3"><span><i class="fab fa-facebook-square ico"></i></span>
-                    <i class="fab fa-linkedin ico"></i> <i class="fab fa-instagram ico"></i>
-                </div>
-            </div>
-            <p class="lead m-0" style="text-align: end;"><i>Interviewed By: Salman khan</i> </p>
+            <div class="contactinfo">';
+            $idobtained=$_GET['blogid'];
+            $sql2 = "SELECT * FROM `bloglist`";
+            $result2 = mysqli_query($conn, $sql2);
+            while($row2 = mysqli_fetch_assoc($result2))
+            {
+                $interviewer = $row2['Interviewer'];
+                $fblink = $row2['FacebookLink'];
+                $instalink = $row2['instaLink'];
+                $linkdenlink = $row2['linkedInLink'];
+                $interviewee = $row2['Interviewee'];
+                $company = $row2['Company'];
+                $placeNintern = $row2['placeNintern'];
+                $id = $row2['blogid'];
+                $plink = $row2['photo'];
+                if($id == $idobtained)
+                {
+                    if($placeNintern == "placement")
+                    {
+                        $placeNintern = "Placed";
+                    }
+                    else
+                    {
+                        $placeNintern = "Intern";
+                    }
+                    echo '<div style="width: 33.33%;" id="l1">'.$interviewee.'</div>
+                    <div style="width: 33.33%;" id="l2">'.$placeNintern.' at '.$company.'</div>';
+                }
             
+               echo' 
+                <div style="width: 33.33%;" class="linked" id="l3"><span><a href='.$fblink.'><i class="fab fa-facebook-square ico" id = "fbLink"></i></a></span>
+                    <a href='.$linkdenlink.'><i class="fab fa-linkedin ico"></i></a> <a href='.$instalink.'><i class="fab fa-instagram ico"></i></a>
+                </div>
+            </div>';
+            echo '
+            <p class="lead m-0" style="text-align: end;"><i>Interviewed By: '.$interviewer.'</i> </p>
+            <img src='.$plink.' class="intervieweeimg">
             <div class="conv">';
+            }
             $idobtained=$_GET['blogid'];
             $sql = "SELECT * FROM `conversation`";
+            
             $result = mysqli_query($conn, $sql);
+            
             while($row =  mysqli_fetch_assoc($result))
             {   
             $id = $row['blogid'];

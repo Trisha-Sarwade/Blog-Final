@@ -275,7 +275,7 @@
                 $dept = $row['Department'];
                 $ser = $row['Series'];
                 $plin = $row['placeNintern'];
-                $des =  $row['Description'];
+                $des =  $row['Descript'];
                 $plin2 = "";
                 $title = $row['Title'];
                 $ser2 = strtoupper($ser);
