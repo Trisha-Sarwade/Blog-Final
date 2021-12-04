@@ -182,7 +182,9 @@ html {
   width: 20%;
   float: left;
 }
-
+.deptcode{
+  margin-bottom: 5px;
+}
 .right {
   width: 70%;
   /* float: right; */
