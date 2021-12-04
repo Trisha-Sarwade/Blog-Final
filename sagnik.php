@@ -292,7 +292,7 @@
                             </button>
                         </h2>
                         <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
+                            <div class="accordion-body" style="overflow: scroll; height: 80px">
                                 <button class="btnf" onclick="filterSelection('IM')"> IM</button><br>
                                 <button class="btnf" onclick="filterSelection('NA')"> NA</button><br>
                                 <button class="btnf" onclick="filterSelection('EE')"> EE</button><br>
