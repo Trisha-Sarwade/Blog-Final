@@ -170,11 +170,32 @@
             aria-labelledby="headingOne"
             data-bs-parent="#accordionExample"
           >
-            <div class="accordion-body">
+            <div class="accordion-body" style="overflow: scroll; height:400px">
               <button class="btnf" onclick="filterSelection('IM')">IM</button>
               <button class="btnf" onclick="filterSelection('NA')">NA</button>
               <button class="btnf" onclick="filterSelection('EE')">EE</button>
               <button class="btnf" onclick="filterSelection('CS')">CS</button>
+              <button class="btnf" onclick="filterSelection('CS')">CE</button>
+              <button class="btnf" onclick="filterSelection('CS')">CH</button>
+              <button class="btnf" onclick="filterSelection('CS')">EC</button>
+              <button class="btnf" onclick="filterSelection('CS')">AE</button>
+              <button class="btnf" onclick="filterSelection('CS')">AG</button>
+              <button class="btnf" onclick="filterSelection('CS')">AR</button>
+              <button class="btnf" onclick="filterSelection('CS')">BT</button>
+              <button class="btnf" onclick="filterSelection('CS')">CY</button>
+              <button class="btnf" onclick="filterSelection('CS')">EX</button>
+              <button class="btnf" onclick="filterSelection('CS')">GG</button>
+              <button class="btnf" onclick="filterSelection('CS')">HS</button>
+              <button class="btnf" onclick="filterSelection('CS')">IE</button>
+              <button class="btnf" onclick="filterSelection('CS')">MA</button>
+              <button class="btnf" onclick="filterSelection('CS')">ME</button>
+              <button class="btnf" onclick="filterSelection('CS')">MF</button>
+              <button class="btnf" onclick="filterSelection('CS')">MI</button>
+              <button class="btnf" onclick="filterSelection('CS')">MT</button>
+              <button class="btnf" onclick="filterSelection('CS')">NA</button>
+              <button class="btnf" onclick="filterSelection('CS')">PH</button>
+              <button class="btnf" onclick="filterSelection('CS')">QE</button>
+              <button class="btnf" onclick="filterSelection('CS')">QM</button>
             </div>
           </div>
         </div>
@@ -198,22 +219,22 @@
             data-bs-parent="#accordionExample"
           >
             <div class="accordion-body">
-              <button class="btnf" onclick="filterSelection('core')">
+              <button class="btnf" onclick="filterSelection('CORE_COMBAT')">
                 Core Combat
               </button>
-              <button class="btnf" onclick="filterSelection('consul')">
+              <button class="btnf" onclick="filterSelection('CONSULTALKS')">
                 Consultalks
               </button>
-              <button class="btnf" onclick="filterSelection('product')">
+              <button class="btnf" onclick="filterSelection('PRODUCT')">
                 Product
               </button>
-              <button class="btnf" onclick="filterSelection('FMCG')">
+              <button class="btnf" onclick="filterSelection('FMCG_LUMINARIES')">
                 FMCG Luminaries
               </button>
-              <button class="btnf" onclick="filterSelection('finforte')">
+              <button class="btnf" onclick="filterSelection('FINFORTE')">
                 Finforte
               </button>
-              <button class="btnf" onclick="filterSelection('ml')">ML</button>
+              <button class="btnf" onclick="filterSelection('ML')">ML</button>
             </div>
           </div>
         </div>
@@ -237,10 +258,10 @@
             data-bs-parent="#accordionExample"
           >
             <div class="accordion-body">
-              <button class="btnf" onclick="filterSelection('intern')">
+              <button class="btnf" onclick="filterSelection('INTERNSHIP')">
                 Internships
               </button>
-              <button class="btnf" onclick="filterSelection('placed')">
+              <button class="btnf" onclick="filterSelection('PLACEMENT')">
                 Placement
               </button>
             </div>
@@ -286,7 +307,7 @@
                   aria-labelledby="headingOne"
                   data-bs-parent="#accordionExample"
                 >
-                  <div class="accordion-body">
+                  <div class="accordion-body" style="overflow-y: scroll; height:40px">
                     <button class="btnf" onclick="filterSelection('IM')">
                       IM</button
                     ><br />
@@ -299,6 +320,27 @@
                     <button class="btnf" onclick="filterSelection('CS')">
                       CS</button
                     ><br />
+                    <button class="btnf" onclick="filterSelection('CS')">CE</button>
+                    <button class="btnf" onclick="filterSelection('CS')">CH</button>
+                    <button class="btnf" onclick="filterSelection('CS')">EC</button>
+                    <button class="btnf" onclick="filterSelection('CS')">AE</button>
+                    <button class="btnf" onclick="filterSelection('CS')">AG</button>
+                    <button class="btnf" onclick="filterSelection('CS')">AR</button>
+                    <button class="btnf" onclick="filterSelection('CS')">BT</button>
+                    <button class="btnf" onclick="filterSelection('CS')">CY</button>
+                    <button class="btnf" onclick="filterSelection('CS')">EX</button>
+                    <button class="btnf" onclick="filterSelection('CS')">GG</button>
+                    <button class="btnf" onclick="filterSelection('CS')">HS</button>
+                    <button class="btnf" onclick="filterSelection('CS')">IE</button>
+                    <button class="btnf" onclick="filterSelection('CS')">MA</button>
+                    <button class="btnf" onclick="filterSelection('CS')">ME</button>
+                    <button class="btnf" onclick="filterSelection('CS')">MF</button>
+                    <button class="btnf" onclick="filterSelection('CS')">MI</button>
+                    <button class="btnf" onclick="filterSelection('CS')">MT</button>
+                    <button class="btnf" onclick="filterSelection('CS')">NA</button>
+                    <button class="btnf" onclick="filterSelection('CS')">PH</button>
+                    <button class="btnf" onclick="filterSelection('CS')">QE</button>
+                    <button class="btnf" onclick="filterSelection('CS')">QM</button>
                   </div>
                 </div>
               </div>
@@ -379,7 +421,7 @@
     </div>
     <div class="coloumn right">
       <div class="latestlist">
-        <div class="blogc card mb-3 EE core placed" style="max-width: 840px">
+        <div class="blogc card mb-3 EE CORE_COMBAT PLACEMENT" style="max-width: 840px">
           <div class="row g-0">
             <div class="col-md-4">
               <img
@@ -425,7 +467,7 @@
             </div>
           </div>
         </div>
-        <div class="blogc card mb-3 IM ml intern" style="max-width: 840px">
+        <div class="blogc card mb-3 IM ML INTERNSHIP" style="max-width: 840px">
           <div class="row g-0">
             <div class="col-md-4">
               <img
@@ -472,7 +514,7 @@
           </div>
         </div>
         <div
-          class="blogc card mb-3 NA finforte placed"
+          class="blogc card mb-3 NA FINFORTE PLACEMENT"
           style="max-width: 840px"
         >
           <div class="row g-0">
@@ -521,7 +563,7 @@
           </div>
         </div>
         <div
-          class="blogc card cardr mb-3 CS consul intern"
+          class="blogc card cardr mb-3 CS CONSULTALKS INTERNSHIP"
           style="max-width: 840px"
         >
           <div class="row g-0">
