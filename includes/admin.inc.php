@@ -34,16 +34,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         mysqli_query($conn,$sql2);
     }
     
-    mysqli_query($conn,$sql);
+mysqli_query($conn,$sql);
     
-    header("location: ../admin.php?error=none");
+header("location: ../admin.php?error=none");
     
-    require_once 'functions.inc.php';
+require_once 'functions.inc.php';
 
-    if (emptyInputSignup($interviewer,$interviewee,$title,$dept,$series,$placenintern,$desc,$company,$fb,$linkedin,$ig,$pic) !== false) {
+if (emptyInputSignup($interviewer,$interviewee,$title,$dept,$series,$placenintern,$desc,$company,$fb,$linkedin,$ig,$pic) !== false) {
         header("location: ../admin.php?error=emptyinput");
         exit();
-    }  
+}  
     if (emptyInputConvo($qsummary,$ques,$ans) !== false) {
         header("location: ../admin.php?error=emptyconvo");
         exit();
@@ -55,3 +55,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 else {
     header("location: ../admin.php");
 }
+?>

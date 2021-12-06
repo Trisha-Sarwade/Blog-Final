@@ -74,11 +74,14 @@ echo
             <button id="btton">Questions</button>
             <aside id="mainAside" class="Aside animation">
                 <ul class="navbar-nav pl-3">';
+                $no = 0;
+                $nos=0;
                 $idobtained=$_GET['blogid'];
                 $sql = "SELECT * FROM `conversation`";
                 $result = mysqli_query($conn, $sql);
                 while($row =  mysqli_fetch_assoc($result))
                 {
+                $nos++;
                 $id = $row['blogid'];
                 if($id == $idobtained)
                     {
@@ -86,7 +89,7 @@ echo
                         $QSummary = $row['QSummary'];
                         $Question = $row['Question'];
                         $Answer = $row['Answer'];
-                        echo '<li class="links nav-item"><a class="nav-link"href="index.html"><span class="py-1" id="nl1"><details><summary class="summ">'.$QSummary.'</summary><p>'.$Question.'</p></details></span></a></li>';
+                        echo '<li class="links nav-item"><a class="nav-link"href="#inPageLink'.$nos.'"><span class="py-1" id="nl1"><details><summary class="summ">'.$QSummary.'</summary><p>'.$Question.'</p></details></span></a></li>';
                     }
                 }
                 echo '
@@ -103,18 +106,20 @@ echo
             $result2 = mysqli_query($conn, $sql2);
             while($row2 = mysqli_fetch_assoc($result2))
             {
-                $interviewer = $row2['Interviewer'];
-                $fblink = $row2['FacebookLink'];
-                $instalink = $row2['instaLink'];
-                $linkdenlink = $row2['linkedInLink'];
-                $interviewee = $row2['Interviewee'];
-                $company = $row2['Company'];
-                $placeNintern = $row2['placeNintern'];
-                $id = $row2['blogid'];
-                $plink = $row2['photo'];
+               $id = $row2['blogid'];
+               
                 if($id == $idobtained)
                 {
-                    if($placeNintern == "placed")
+                    $interviewer = $row2['Interviewer'];
+                    $fblink = $row2['FacebookLink'];
+                    $instalink = $row2['instaLink'];
+                    $linkdenlink = $row2['linkedInLink'];
+                    $interviewee = $row2['Interviewee'];
+                    $company = $row2['Company'];
+                    $placeNintern = $row2['placeNintern'];
+                    $id = $row2['blogid'];
+                    $plink = $row2['photo'];
+                    if($placeNintern == "PLACEMENT")
                     {
                         $placeNintern = "Placed";
                     }
@@ -124,9 +129,7 @@ echo
                     }
                     echo '<div style="width: 33.33%;" id="l1">'.$interviewee.'</div>
                     <div style="width: 33.33%;" id="l2">'.$placeNintern.' at '.$company.'</div>';
-                }
-            
-               echo' 
+                    echo' 
                 <div style="width: 33.33%;" class="linked" id="l3"><span><a href='.$fblink.'><i class="fab fa-facebook-square ico" id = "fbLink"></i></a></span>
                     <a href='.$linkdenlink.'><i class="fab fa-linkedin ico"></i></a> <a href='.$instalink.'><i class="fab fa-instagram ico"></i></a>
                 </div>
@@ -135,6 +138,9 @@ echo
             <p class="lead m-0" style="text-align: end;"><i>Interviewed By: '.$interviewer.'</i> </p>
             <img src='.$plink.' class="intervieweeimg">
             <div class="conv">';
+                }
+            
+               
             }
             $idobtained=$_GET['blogid'];
             $sql = "SELECT * FROM `conversation`";
@@ -142,7 +148,8 @@ echo
             $result = mysqli_query($conn, $sql);
             
             while($row =  mysqli_fetch_assoc($result))
-            {   
+            {
+            $no++;
             $id = $row['blogid'];
             if($id == $idobtained)
             {
@@ -153,10 +160,10 @@ echo
                 $Answer = $row['Answer'];
 
                 echo '<div class="qna allblur">
-                <div class="q">';
+                <div class="q" id="inPageLink'.$no.'">';
                 echo $Question.'
                 </div><br>
-                <div class="a pb-3">';
+                <div class="a pb-3" name = "a'.$no.'">';
                 echo $Answer.'
                 </div>
                 <hr class="separator">
@@ -171,9 +178,9 @@ echo
         <div class="row d-flex">
 
             <div class="col-12 c1">
-                <button type="button" id="btton1" onclick="window.location="#"">
+                <a href="sagnik.php"><button type="button" id="btton1" onclick="window.location="#"">
                     <i class="fas fa-arrow-left"></i>
-                </button>
+                </button></a>
                 <h6 class="btl">Back to list</h6>
             </div>
             <script type="text/javascript" src="https://unpkg.com/applause-button/dist/applause-button.js"></script>

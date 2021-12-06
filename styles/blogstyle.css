@@ -1,3 +1,6 @@
+.blogPic {
+  max-height: 400px;
+}
 html {
   margin: 1%;
 }
@@ -120,6 +123,12 @@ html {
 }
 
 @media screen and (max-width: 881px) {
+  .g-0 {
+    justify-content: center;
+  }
+  .cardsmScreen {
+    text-align: center;
+  }
   .bloghead {
     background-position: 0% 9%;
     background-size: 100%;
@@ -182,7 +191,7 @@ html {
   width: 20%;
   float: left;
 }
-.deptcode{
+.deptcode {
   margin-bottom: 5px;
 }
 .right {

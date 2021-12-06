@@ -1,6 +1,25 @@
 "use strict";
 const qlist = document.querySelector("#question-list");
 let noQuestion;
+const btndel = document.querySelector(".deletebtn");
+const btnAdd = document.querySelector(".addbtn");
+const btnEdit = document.querySelector(".editbtn");
+const addSec = document.querySelector(".add");
+const editSec = document.querySelector(".edit");
+const deleteSec = document.querySelector(".delete");
+
+btnAdd.addEventListener("click", function (e) {
+  e.preventDefault();
+  addSec.classList.remove("d-none");
+});
+btnEdit.addEventListener("click", function (e) {
+  e.preventDefault();
+  editSec.classList.remove("d-none");
+});
+btndel.addEventListener("click", function (e) {
+  e.preventDefault();
+  deleteSec.classList.remove("d-none");
+});
 
 document.querySelector(".QAdd").addEventListener("click", function (event) {
   event.preventDefault();

@@ -1,6 +1,6 @@
 <?php
     session_start();
-
+    $_SESSION['loggedin'] = true;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,12 +12,17 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
-
-    <title>Add a blog</title>
+    <link rel="stylesheet" href="admin.css">
+    <title>Add/Edit a blog</title>
 </head>
 
 <body>
-    <div class="container">
+    <div class="d-flex">
+    <button class = "mx-5 my-5 addbtn" >Add A blog</button>
+    <button class = "mx-5 my-5 editbtn" >Edit a blog</button>
+    <button class = "mx-5 my-5 deletebtn" >Delete a blog</button>
+    </div>
+    <div class="container d-none add">
         <h1 class="my-5">Add a Blog</h1>
         <form action="includes/admin.inc.php" method="POST">
         <div class="mb-3 mt-5 ml-5">
@@ -62,7 +67,7 @@
             aria-describedby="emailHelp"
           />
           <div id="placeNinternn" class="form-text">
-            Write either placement or internship
+            Write either PLACEMENT or INTERNSHIP
           </div>
         </div>
         <div class="mb-3 mt-5 ml-5">
@@ -84,7 +89,7 @@
           <label for="Department" class="form-label">Department</label>
                 <input type="text" class="form-control" name="Department" id="form" aria-describedby="emailHelp" />
                 <div id="Departmentt" class="form-text">
-                    Write the Department's Full name
+                    Write the Department as it would appear in one's Roll No. (Ex AE,BT,GG,EX etc.)
                 </div>
             </div>
 
@@ -92,7 +97,7 @@
                 <label for="Series" class="form-label">Series</label>
                 <input type="text" class="form-control" name="Series" id="form" aria-describedby="emailHelp" />
                 <div id="Series" class="form-text">
-                    Choose one from Core Combat, Product Series, FMCG Luminaries, Finforte, Consult Question No.
+                    Choose one from CORE_COMBAT, PRODUCT, FMCG_LUMINARIES, FINFORTE, CONSULTALKS, ML
                 </div>
             </div>
             <div class="mb-3 mt-5 ml-5">
@@ -130,10 +135,41 @@
           </div>
           <button class="btn btn-primary my-5 QAdd">Add Questions</button>
         </div>
-
+        
     <div class="container my-5 p-5" id="question-list"></div>
     <button class="btn btn-primary" type="submit" name="submit" >Submit to Database</button>
-  
+</div>
+
+</form>
+
+<div class="container d-none edit">
+        
+        <form action="edit.php" method="POST">
+        <div class="mb-3 mt-5 ml-5">
+                <label for="title" class="form-label">blogid</label>
+                <input type="text" class="form-control" id="blogid" name="blogid" aria-describedby="emailHelp" />
+                <div id="titlee" class="form-text">
+                    Write down the blogid of the blog you want to edit. 
+                </div>
+            </div>
+            <button>Get the blog</button>
+        </form>   
+</div> 
+
+<div class="container d-none delete">
+        
+        <form action="delete.php" method="POST">
+        <div class="mb-3 mt-5 ml-5">
+                <label for="title" class="form-label">blogid</label>
+                <input type="text" class="form-control" id="blogid" name="blogid" aria-describedby="emailHelp" />
+                <div id="titlee" class="form-text">
+                    Write down the blogid of the blog you want to delete. 
+                </div>
+            </div>
+            <button>Delete the blog</button>
+        </form>   
+</div> 
+        
 
     <!-- Optional JavaScript; choose one of the two! -->
 
