@@ -67,8 +67,20 @@ echo
 </nav>
 
 
-</section>
-    <h1 class=" heading">Desired Heading</h1>
+</section>';
+$sql = "SELECT * FROM `bloglist`";
+$result = mysqli_query($conn, $sql);
+while($row =  mysqli_fetch_assoc($result))
+{
+$idobtained=$_GET['blogid'];
+$id = $row['blogid'];
+if($id == $idobtained)
+    {
+        $title = $row['Title'];
+        echo '<h1 class=" heading">'.$title.'</h1>';
+    }
+}
+    echo '
     <div class="everything">
         <div class="loq">
             <button id="btton">Questions</button>
@@ -178,7 +190,7 @@ echo
         <div class="row d-flex">
 
             <div class="col-12 c1">
-                <a href="sagnik.php"><button type="button" id="btton1" onclick="window.location="#"">
+                <a href="index.php"><button type="button" id="btton1" onclick="window.location="#"">
                     <i class="fas fa-arrow-left"></i>
                 </button></a>
                 <h6 class="btl">Back to list</h6>

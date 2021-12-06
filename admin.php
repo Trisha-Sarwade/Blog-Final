@@ -21,6 +21,8 @@
     <button class = "mx-5 my-5 addbtn" >Add A blog</button>
     <button class = "mx-5 my-5 editbtn" >Edit a blog</button>
     <button class = "mx-5 my-5 deletebtn" >Delete a blog</button>
+    <button class = "mx-5 my-5" ><a href="index.php">Go Back</a></button>
+
     </div>
     <div class="container d-none add">
         <h1 class="my-5">Add a Blog</h1>

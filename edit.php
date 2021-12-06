@@ -141,10 +141,12 @@ include 'dbconnect.php';
                         }
                         while($row2 = mysqli_fetch_assoc($result2))
                         {
-                            global $i;
-                            $i=$i+1;
+                           
+                            
                             if($row2['blogid'] == $id)
                             {
+                                global $i;
+                                $i=$i+1;
                                 $Qs = $row2['QSummary'];
                                 $Q = $row2['Question'];
                                 $A = $row2['Answer']; 
