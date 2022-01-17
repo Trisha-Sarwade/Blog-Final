@@ -195,6 +195,9 @@ if($id == $idobtained)
                 </button></a>
                 <h6 class="btl">Back to list</h6>
             </div>
+            
+
+            
             <script type="text/javascript" src="https://unpkg.com/applause-button/dist/applause-button.js"></script>
             <script type="text/javascript" src="secondpg.js"></script>
             <script src="https://kit.fontawesome.com/c6d6973d4d.js" crossorigin="anonymous"></script>
@@ -206,8 +209,11 @@ if($id == $idobtained)
                 crossorigin="anonymous"></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
                 integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-                crossorigin="anonymous"></script>
+                crossorigin="anonymous"></script>;'
+                ?>
+                <div class="right">
+                    
+                </div>
 </body>
 
-</html>';
-?>
+</html>
