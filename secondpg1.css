@@ -18,7 +18,7 @@
 }
 
 #mainAside {
-    width: 180px;
+    width: 210px;
     top: 220px;
     overflow: auto;
     left: -200px;
@@ -41,10 +41,11 @@
     margin-top: 30px;
     color: white;
     border: none;
-    padding: 5px 20px 14px 20px;
+    padding: 5px 50px 14px 30px;
     font-weight: 550;
     font-size: 22px;
     border-bottom-right-radius: 15px;
+    width: 15vw;
 }
 
 .mar {
@@ -126,8 +127,8 @@
 }
 
 .intervieweeimg {
-    /*height: 300px;
-  width: 300px;*/
+    height: 50vw;
+    width: 50vw;
     margin-top: 30px;
     margin-bottom: 30px;
 }
@@ -219,4 +220,8 @@ br {
 
 .right {
     width: 30%;
+}
+
+.rightside {
+    width: 20%;
 }
