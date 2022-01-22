@@ -334,6 +334,7 @@
                                 <button class="btnf" onclick="filterSelection('PRODUCT')"> Product</button><br>
                                 <button class="btnf" onclick="filterSelection('FMCG_LUMINARIES')"> FMCG Luminaries</button><br>
                                 <button class="btnf" onclick="filterSelection('FINFORTE')"> Finforte</button><br>
+                                <button class="btnf" onclick="filterSelection('data')"> Data Crux</button><br>
                                 <button class="btnf" onclick="filterSelection('ML')"> ML</button><br>
                             </div>
                         </div>

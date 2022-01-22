@@ -27,3 +27,15 @@ document.getElementById("btton").addEventListener("click",function(){
 	bjects.classList.toggle("mar");
 	
 });
+
+document.getElementById("btton2").addEventListener("click", function(){
+	var rightL = document.getElementById("rlist");
+	// var switched = false;
+	if(rightL.style.display === "none"){
+		rightL.style.display = "block";
+	}
+	else{
+		rightL.style.display = "none";
+	}
+	// rightL.classList.toggle("slide-in-right");
+})
