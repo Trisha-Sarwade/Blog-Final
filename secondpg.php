@@ -10,8 +10,8 @@ echo
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="secondpg1.css">
     <link rel="stylesheet" href="styles/gunjan.css">
+    <link rel="stylesheet" type="text/css" href="secondpg1.css">
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/applause-button/dist/applause-button.css">
     <title>Our Blogs</title>
 </head>
@@ -82,7 +82,7 @@ if($id == $idobtained)
 }
     echo '
     <div class="everything">
-        <div class="loq">
+        <div class="loq hide" id="loqid">
             <button id="btton">Questions</button>
             <aside id="mainAside" class="Aside animation">
                 <ul class="navbar-nav pl-3">';
@@ -129,6 +129,7 @@ if($id == $idobtained)
                     $interviewee = $row2['Interviewee'];
                     $company = $row2['Company'];
                     $placeNintern = $row2['placeNintern'];
+                    $series = $row2['Series'];
                     $id = $row2['blogid'];
                     $plink = $row2['photo'];
                     if($placeNintern == "PLACEMENT")
@@ -151,7 +152,6 @@ if($id == $idobtained)
             <img src='.$plink.' class="intervieweeimg">
             <div class="conv">';
                 }
-            
                
             }
             $idobtained=$_GET['blogid'];
@@ -183,12 +183,27 @@ if($id == $idobtained)
             }
             
             }
+
+            
               
-              
+    if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
+        $link = "https";
+    else $link = "http";
+        
+    // Here append the common URL characters.
+    $link .= "://";
+        
+    // Append the host(domain name, ip) to the URL.
+    $link .= $_SERVER['HTTP_HOST'];
+        
+    // Append the requested resource location to the URL
+    $link .= $_SERVER['REQUEST_URI'];
+    $eqpos = strpos($link, "=");
+    $part_link = substr($link, 0, $eqpos);
+        
     echo'
     <div class="container-fluid " id="b1">
         <div class="row d-flex">
-
             <div class="col-12 c1">
                 <a href="index.php"><button type="button" id="btton1" onclick="window.location="#"">
                     <i class="fas fa-arrow-left"></i>
@@ -196,33 +211,61 @@ if($id == $idobtained)
                 <h6 class="btl">Back to list</h6>
             </div>
         </div>
-    </div>;'
-            ?>
-            
-
-                </div>
+    </div>
+    </div>
             </div>
-            <div class="rightside">
-            blah blah
+            <div class="rightside hide" id="rtside"> <button  class="rtbtn" id="btton2">Read Related Blogs</button>
+            <div class="rflist slide-in-right" id="rlist" style="display: none;">
+            <ul>';
+            
+    $sql3 = "SELECT Title, blogid FROM `bloglist` WHERE blogid <> '$idobtained' AND Series = '$series' ORDER BY blogid DESC";
+    $count = 0;
+    $res = mysqli_query($conn, $sql3);
+    while($row = mysqli_fetch_assoc($res)){
+        $blogid_s = "=".strval($row["blogid"]);
+        $link_full = $part_link.$blogid_s;
+        echo '<li class="read"><a class="readA" href='.$link_full.'>'.$row["Title"].'</a></li>';
+        if ($count >= 8){
+            $count = 0;
+            break;
+        }
+        else
+            $count = $count + 1;
+    }
+            
+    echo        '</ul></div>
         </div>
     </div>
+    <script src="appear.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/applause-button/dist/applause-button.js"></script>
+    <script type="text/javascript" src="secondpg.js"></script>
+    <script src="https://kit.fontawesome.com/c6d6973d4d.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+              
+</body>
+
+</html>'
+            ?>
+            
+            
+
+                
         
             
 
             
-            <script type="text/javascript" src="https://unpkg.com/applause-button/dist/applause-button.js"></script>
-            <script type="text/javascript" src="secondpg.js"></script>
-            <script src="https://kit.fontawesome.com/c6d6973d4d.js" crossorigin="anonymous"></script>
-            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-                crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-                integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-                crossorigin="anonymous"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-                integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-                crossorigin="anonymous"></script>
-              
-</body>
+    
 
-</html>
+
+
+
+
+
