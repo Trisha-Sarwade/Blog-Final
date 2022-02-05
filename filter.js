@@ -60,4 +60,17 @@ loginButton.addEventListener("click", function () {
     console.log(1);
     window.location.href = "admin.php";
   }
+  else{
+    alrt = document.getElementById("alrt");
+    alrt.style.display = 'block';
+  }
 });
+// $(".clse").live("click", function(e) 
+// {   
+//     $("#alrt").hide();
+// });
+clsbtn = document.getElementById("close");
+clsbtn.addEventListener("click", function(){
+  alrtmod = document.getElementById("alrt");
+  alrtmod.style.display = "none";
+})

@@ -138,6 +138,43 @@
         </div>
       </div>
     </div>
+    <div class="alert alert-danger fade show" role="alert" id="alrt">
+  <strong>Login Failed!</strong> Wrong username or password!
+  <button type="button" class="btn-close" aria-label="Close" id="close"></button>
+</div>
+
+<!-- <script>  
+ $(document).ready(function(){  
+      $('#login_button').click(function(){  
+           var username = $('#admin-name').val();  
+           var password = $('#password').val();  
+           if(username != '' && password != '')  
+           {  
+                $.ajax({  
+                     url:"admin.php",  
+                     method:"POST",  
+                     data: {username:username, password:password},  
+                     success:function(data)  
+                     {  
+                          //alert(data);  
+                          if(data == 'No')  
+                          {  
+                               alert("Wrong Data");  
+                          }  
+                          else  
+                          {  
+                               $('#loginModal').hide();  
+                               location.reload();  
+                          }  
+                     }  
+                });  
+           }  
+           else  
+           {  
+                alert("Both Fields are required");  
+           }  
+      });
+  </script> -->
     <br />
     <div class="bloghead">
 
