@@ -419,8 +419,7 @@
                         <div class="blogc card mb-3 '.$dept.' '.$ser.' '.$plin.'" style="max-width: 840px;">
                             <div class="row g-0">
                             <div class="col-md-4" style="width: fit-content;height: fit-content;">
-                                <img src="'.$plink.'" class="img-fluid rounded-start" alt="..." style="width: 100%;height: 100%;
-                                max-width: 200px; max-height: 190px;">
+                                <img src="'.$plink.'" class="img-fluid rounded-start" alt="..." style=" width: 180px; height: 200px;">
                                 </div>
                                 <div class="col-md-8 cardsmScreen">
                                     <div class="card-body">
